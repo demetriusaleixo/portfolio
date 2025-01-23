@@ -1,0 +1,14 @@
+.listaProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+}
+
+.listaProjetos li {
+    margin-bottom: 1rem;
+}
+
+.listaProjetos li a {
+    color: #EF7B24;
+}

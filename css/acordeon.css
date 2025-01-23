@@ -20,6 +20,7 @@
     background-color: #90e0ef;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .acordeon .ativador::after {
