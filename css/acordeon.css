@@ -1,0 +1,48 @@
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.acordeon.ativo {
+    background-color: #90e0ef;
+}
+
+.acordeon .ativador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    background-color: #90e0ef;
+    border: none;
+    border-radius: 1rem;
+}
+
+.acordeon .ativador::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../imagens/icones/seta.svg');
+    transition: 0.25s ease-in-out;
+}
+
+.acordeon.ativo .ativador::after {
+    transform: rotate(180deg);
+}
+
+.acordeon .content {
+    display: none;
+    transition: 0.25s ease-in-out;
+}
+
+.acordeon.ativo .content {
+    display: inline-block;
+    padding: 1rem;
+}

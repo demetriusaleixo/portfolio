@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164);
+}
+
+.titulo {
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+    font-weight: 300;
+}
+
+.titulo span {
+    color: gold;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+}
+
+.informacoes p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+
+.informacoes .atuacao::before {
+    background-image: url('../imagens/icones/pessoa.svg');
+}
+
+.informacoes .localizacao::before {
+    background-image: url('../imagens/icones/local.svg');
+}
+
+.informacoes .telefone::before {
+    background-image: url('../imagens/icones/telefone.svg');
+}
+
+.informacoes .email::before {
+    background-image: url('../imagens/icones/email.svg');
+}
+
+@media screen and (min-width: 768px){
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "foto titulo"
+            "foto informacoes"
+        ;
+    }
+
+    .header .foto {
+        grid-area: foto;
+        margin: 0 auto;
+    }
+
+    .header .titulo {
+        grid-area: titulo;
+        text-align: start;
+        max-width: 245px;
+    }
+
+    .header .informacoes {
+        grid-area: informacoes;
+    }
+}
