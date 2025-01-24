@@ -17,8 +17,8 @@
     font-size: 1.5rem;
     font-weight: 700;
     padding: 1rem;
-    background-color: #90e0ef;
-    border: none;
+    background-color: transparent;
+    border: 3px solid #90e0ef;
     border-radius: 1rem;
     cursor: pointer;
 }
